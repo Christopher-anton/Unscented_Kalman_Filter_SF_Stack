@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/chris/Udacity/Udacity Sensor Fusion (personal)/Kalman Filter/SFND_Unscented_Kalman_Filter-master/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8e594/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8e594.dir/build.make CMakeFiles/cmTC_8e594.dir/build
+make[1]: Entering directory '/home/chris/Udacity/Udacity Sensor Fusion (personal)/Kalman Filter/SFND_Unscented_Kalman_Filter-master/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8e594.dir/CheckSymbolExists.c.o
+/usr/lib/ccache/cc    -o CMakeFiles/cmTC_8e594.dir/CheckSymbolExists.c.o   -c "/home/chris/Udacity/Udacity Sensor Fusion (personal)/Kalman Filter/SFND_Unscented_Kalman_Filter-master/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c"
+Linking C executable cmTC_8e594
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e594.dir/link.txt --verbose=1
+/usr/lib/ccache/cc      -rdynamic CMakeFiles/cmTC_8e594.dir/CheckSymbolExists.c.o  -o cmTC_8e594 
+CMakeFiles/cmTC_8e594.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8e594.dir/build.make:97: recipe for target 'cmTC_8e594' failed
+make[1]: *** [cmTC_8e594] Error 1
+make[1]: Leaving directory '/home/chris/Udacity/Udacity Sensor Fusion (personal)/Kalman Filter/SFND_Unscented_Kalman_Filter-master/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8e594/fast' failed
+make: *** [cmTC_8e594/fast] Error 2
+
+File /home/chris/Udacity/Udacity Sensor Fusion (personal)/Kalman Filter/SFND_Unscented_Kalman_Filter-master/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/chris/Udacity/Udacity Sensor Fusion (personal)/Kalman Filter/SFND_Unscented_Kalman_Filter-master/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c1d7e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c1d7e.dir/build.make CMakeFiles/cmTC_c1d7e.dir/build
+make[1]: Entering directory '/home/chris/Udacity/Udacity Sensor Fusion (personal)/Kalman Filter/SFND_Unscented_Kalman_Filter-master/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c1d7e.dir/CheckFunctionExists.c.o
+/usr/lib/ccache/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c1d7e.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c1d7e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c1d7e.dir/link.txt --verbose=1
+/usr/lib/ccache/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_c1d7e.dir/CheckFunctionExists.c.o  -o cmTC_c1d7e -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c1d7e.dir/build.make:97: recipe for target 'cmTC_c1d7e' failed
+make[1]: *** [cmTC_c1d7e] Error 1
+make[1]: Leaving directory '/home/chris/Udacity/Udacity Sensor Fusion (personal)/Kalman Filter/SFND_Unscented_Kalman_Filter-master/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c1d7e/fast' failed
+make: *** [cmTC_c1d7e/fast] Error 2
+
+
